@@ -7,17 +7,24 @@
  <title>名片</title>
 </head>
 <style>
-#header {height:150px;background-image:url("BJ1.jpg");background-repeat:no-repeat;background-size:cover;padding:1em;opacity:0.7;text-shadow: 5px 5px 5px #CDC673;padding:1em; font-family:DFKai-sb;}
-#article {height:700px;padding:1em;background-color:#DEB887}
-a:link {color:#C67171;}
-a:visited {color:#C67171;}
-a:hover {color:#C1FFC1;}
-a:active {color:#8FBC8F;}
-#footer {height:150px;background-color:#EECFA1;padding:1em;}
-.column1 {float: left; width: 50%; height: 400px; text-align: center;padding:1em;background-color:#DEB887}
+#header {position:fixed;height:150px;width:100%;background-image:url("BJ1.jpg");background-repeat:no-repeat;background-size:cover;padding:1em;opacity:0.9;text-shadow: 5px 5px 5px #CDC673;padding:1em;z-index:999 ; font-family:DFKai-sb;}
+#article {height:700px;padding:1em;background-color:#DEB887;position: relative;top: 150px}
+a:link {color:#030303;font-size: 2em}
+a:visited {color:#030303;font-size: 2em}
+a:hover {color:#54FF9F;font-size: 2em}
+a:active {color:#4D4D4D;font-size: 2em}
+#footer {height:150px;background-color:#EECFA1;padding:1em;position: relative;top: 150px;}
+.column1 {float: left; width: 50%; height: 400px; text-align: center;padding:1em;background-color:#DEB887;position: relative;top: 150px}
 font {color:#030303;text-align:left; }
 h4 {text-align:right}
-* {box-sizing: border-box;}
+ul {list-style-type: none; margin: 0; padding: 0;}
+li {display: inline; margin-right: 30px}
+#icon {display: none;}
+@media screen and (max-width: 600px) {
+ul li {display: none;}
+#icon {display: block;}
+}
+* {box-sizing: border-box; margin:0;}
 @media screen and (max-width: 768px)
 {.column1{width: 100%; height: 30%;
 }
@@ -26,6 +33,11 @@ h4 {text-align:right}
 <body>
 <div id="header">
 <font size="10"><b>名片</b></font>
+<ul><li id="icon"><a href="#all">+</a></li>
+<li><a href="CMMZY.html">主頁</a></li>
+<li><a href="XHD.html">新活動</a></li>
+<li><a href="NT.html">農田</a></li>
+<li><a href="NZW.html">農作物</a></li></ul>
 </div>
 <div id="article">
     <div class="column1">

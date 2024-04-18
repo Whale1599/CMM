@@ -7,19 +7,40 @@
  <title>農作物</title>
 </head>
 <style>
-#header {height:150px;background-image:url("BJ1.jpg");background-repeat:no-repeat;background-size:cover;padding:1em;opacity:0.7;text-shadow: 5px 5px 5px #CDC673;padding: 1em font-family:DFKai-sb;}
-.column1 {float: left; width: 50%; height: 850px; text-align: center;padding:1em;background-color:#DEB887}
-a:link {color:#C67171;}
-a:visited {color:#C67171;}
-a:hover {color:#C1FFC1;}
-a:active {color:#8FBC8F;}
-#footer {clear:both;height:120px;background-color:#EECFA1;padding:1em;}
+#header {position:fixed;height:150px;width:100%;background-image:url("BJ1.jpg");background-repeat:no-repeat;background-size:cover;padding:1em;opacity:0.9;text-shadow: 5px 5px 5px #CDC673;padding: 1em;z-index:999 ; font-family:DFKai-sb;}
+a:link {color:#030303;font-size: 2em}
+a:visited {color:#030303;font-size: 2em}
+a:hover {color:#54FF9F;font-size: 2em}
+a:active {color:#4D4D4D;font-size: 2em}
+.center {
+height: 500px;width: auto;float: center;text-align: center; background-image: url('TP1.jpg'); background-size: cover;position: relative;
+animation-name: anime; animation-duration: 20s;
+animation-iteration-count: infinite;
+}
+@keyframes anime {
+0% {background-image: url('TP1.jpg'); background-size: cover}
+25% {background-image: url('TP2.jpg'); background-size: cover}
+50% {background-image: url('TP3.jpg'); background-size: cover}
+75% {background-image: url('TP4.jpg'); background-size: cover}
+100% {background-image: url('TP5.jpg'); background-size: cover}
+}
+#zplb {heught:300px;float: center;background-color: #DEB887;padding: 1em;position: relative;top: 150px}
+#bg {heught:300px;background-color: #DEB887;padding: 1em;position: relative;top: 150px}
+#zw {heught:120px;background-color: #DEB887;padding: 1em;position: relative;top: 150px}
+#footer {height:120px;background-color:#EECFA1;padding:1em;position: relative;top: 150px}
 font {color:#030303;text-align:left; }
 h4 {text-align:right}
 table,td,th { border:1px solid black; }
 table { width:100%; }
 th { height:50px; }
-* {box-sizing: border-box;}
+ul {list-style-type: none; margin: 0; padding: 0;}
+li {display: inline; margin-right: 30px}
+#icon {display: none;}
+@media screen and (max-width: 600px) {
+ul li {display: none;}
+#icon {display: block;}
+}
+* {box-sizing: border-box; margin:0;}
 @media screen and (max-width: 768px)
 {.column1{width: 100%; height: 80%;
 }
@@ -28,12 +49,25 @@ th { height:50px; }
 <body>
 <div id="header">
 <font size="10"><b>農作物</b></font>
+<nav>
+  <ul>
+    <li id="icon"><a href="#all">+</a></li>
+    <li><a href="CMMZY.html">主頁</a></li>
+    <li><a href="XHD.html">新活動</a></li>
+    <li><a href="NT.html">農田</a></li>
+    <li><a href="MP.html">名片</a></li>
+  </ul>
+</nav>
 </div>
-<div class="column1">
-    <img src= "TP1.jpg"width="50%" height="auto"/><img src= "TP5.jpg" width="50%" height="auto" /><img src= "TP3.jpg" width="33.33333%" height="auto" /><img src= "TP4.jpg" width="33.33333%" height="auto" /><img src= "TP2.jpg" width="33.33333%" height="auto" />
-</div>    
-<div class="column1">
+<div id="zplb">
+    <div class="center">
+    </div>
+</div>   
+<div id="bg">
     <table><tr><th>農作物</th><th>月份</th><th>價格</th><th>目前狀況</th></tr><tr><td>番茄</td><td>11月到隔年四月</td><td>依時價而定</td><td>可訂購</td></tr><tr><td>芭樂</td><td>陸陸續續都有</td><td>依時價而定</td><td>可訂購</td></tr><tr><td>白玉蘿蔔</td><td>9月到12月</td><td>依時價而定</td><td>目前未種</td></tr><tr><td>水蜜桃</td><td>4月到5月</td><td>依時價而定</td><td>目前剛種下</td></tr></table>
+</div>
+<div id="zw">
+    <a href="XHD.html"><img src= "5.png" width= "25%" height="auto" /></a><a href="NT.html"><img src= "6.png" width= "25%" height="auto" /></a><a href="NZW.html"><img src= "7.png" width= "25%" height="auto" /></a><a href="MP.html"><img src= "8.png" width= "25%" height="auto" /></a>
 </div>
 <div id="footer">
     <div style="width:35%;float:left;height:75px;text-align:left;"><a href="CMMZY.html"><img src= "SYY.png" width= "180" height="130" /></a>
